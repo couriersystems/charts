@@ -7,8 +7,7 @@ keywords:
 - sql
 home: https://pgbouncer.github.io
 sources:
-- https://github.com/clearbit/charts
+- https://github.com/couriersystems/charts
 maintainers:
-- name: FutureTech Industries
-  email: ops@futuretech.industries
+- name: Courier Systems LLC
 engine: gotpl
