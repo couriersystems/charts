@@ -1,7 +1,24 @@
 apiVersion: v1
 entries:
   pgbouncer:
-  - created: 2018-08-24T17:46:37.07888305-04:00
+  - created: 2018-08-24T17:50:51.720395529-04:00
+    description: Chart for PGBouncer
+    digest: b8a29daccfb34e873d5f093484000f23b3ae78a5dd35c694a8bbad6895734ee2
+    engine: gotpl
+    home: https://pgbouncer.github.io
+    keywords:
+    - postgresql
+    - database
+    - sql
+    maintainers:
+    - name: Courier Systems LLC
+    name: pgbouncer
+    sources:
+    - https://github.com/couriersystems/charts
+    urls:
+    - pgbouncer-0.2.2.tgz
+    version: 0.2.2
+  - created: 2018-08-24T17:50:51.720018829-04:00
     description: Chart for PGBouncer
     digest: 6acdf431bebd233b3bf523b3e9ce01cb4c5166951b68c4b9a6d9d6747ee9e34c
     engine: gotpl
@@ -19,7 +36,7 @@ entries:
     urls:
     - pgbouncer-0.2.1.tgz
     version: 0.2.1
-  - created: 2018-08-24T17:46:37.078528645-04:00
+  - created: 2018-08-24T17:50:51.719636812-04:00
     description: Chart for PGBouncer
     digest: e432a354ea8317da886feec8b1819b8dc603f46db9bc97d8e371fa1b6c413ac3
     engine: gotpl
@@ -37,4 +54,4 @@ entries:
     urls:
     - pgbouncer-0.2.0.tgz
     version: 0.2.0
-generated: 2018-08-24T17:46:37.077922469-04:00
+generated: 2018-08-24T17:50:51.718997147-04:00

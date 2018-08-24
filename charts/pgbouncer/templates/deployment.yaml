@@ -4,7 +4,7 @@ metadata:
   name: {{ template "pgbouncer.fullname" . }}
   labels:
     app: {{ template "pgbouncer.name" . }}
-    chart: {{ template "postgresql.chart" . }}
+    chart: {{ template "pgbouncer.chart" . }}
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
 spec:
@@ -82,7 +82,7 @@ spec:
             name: {{ template "pgbouncer.fullname" . }}
         - name: pgbouncer-probes
           secret: 
-            secretName: {{ template "postgresql.fullname" . }}-probes-settings
+            secretName: {{ template "pgbouncer.fullname" . }}-probes-settings
       securityContext:
         runAsUser: 1000
         fsGroup: 1000
