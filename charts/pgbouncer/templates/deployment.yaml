@@ -1,10 +1,10 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: {{ .Release.Name }}
+  name: {{ template "pgbouncer.fullname" . }}
   labels:
-    app: {{ .Release.Name }}
-    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    app: {{ template "pgbouncer.name" . }}
+    chart: {{ template "postgresql.chart" . }}
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
 spec:
@@ -16,10 +16,10 @@ spec:
         checksum/pgbouncer-creds-secret: {{ include (print $.Template.BasePath "/secret-creds.yaml") . | sha256sum }}
         checksum/pgbouncer-probes-secret: {{ include (print $.Template.BasePath "/secret-probes.yaml") . | sha256sum }}
       labels:
-        app: {{ .Release.Name }}
+        app: {{ template "pgbouncer.name" . }}
     spec:
       containers:
-      - name: {{ .Release.Name }}
+      - name: {{ template "pgbouncer.fullname" . }}
         image: "{{ .Values.image }}:{{ .Values.imageTag }}"
         imagePullPolicy: {{ default "" .Values.imagePullPolicy | quote }}
         resources:
@@ -41,7 +41,7 @@ spec:
         - name: PG_PASS
           valueFrom:
             secretKeyRef:
-              name: {{ .Release.Name }}-creds
+              name: {{ template "pgbouncer.fullname" . }}-creds
               key: postgresql-password
         - name: PG_ADDR
           value: {{ .Values.host }}
@@ -79,10 +79,10 @@ spec:
       volumes:
         - name: pgbouncer-config
           configMap:
-            name: {{ .Release.Name }}-pgbouncer-config
+            name: {{ template "pgbouncer.fullname" . }}
         - name: pgbouncer-probes
           secret: 
-            secretName: {{ .Release.Name }}-probes-settings
+            secretName: {{ template "postgresql.fullname" . }}-probes-settings
       securityContext:
         runAsUser: 1000
         fsGroup: 1000
