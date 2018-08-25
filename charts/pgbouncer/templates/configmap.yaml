@@ -11,6 +11,7 @@ data:
   auth_file: '/pgbouncer/users.txt'
   listen_addr: '*'
   max_client_conn: {{ .Values.maxClientConnections | quote }}
+  ignore_startup_parameters: "extra_float_digits"
   default_pool_size: {{ .Values.poolSize | quote }}
   server_idle_timeout: {{ .Values.serverIdleTimeout | quote }}
   server_lifetime: {{ .Values.serverLifetime | quote }}
