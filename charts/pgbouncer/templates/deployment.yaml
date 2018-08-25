@@ -22,7 +22,7 @@ spec:
       - name: {{ template "pgbouncer.fullname" . }}
         image: "{{ .Values.image }}:{{ .Values.imageTag }}"
         imagePullPolicy: {{ default "" .Values.imagePullPolicy | quote }}
-        command: "echo 'extra_float_digits' > /pgbouncer-config/ignore_startup_parameters && /run.sh"
+        command: ["/bin/sh", "-c" , "echo 'extra_float_digits' > /pgbouncer-config/ignore_startup_parameters && /run.sh"]
         resources:
           limits:
             cpu: {{ .Values.cpu }}
