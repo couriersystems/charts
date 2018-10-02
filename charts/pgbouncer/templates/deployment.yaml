@@ -17,6 +17,7 @@ spec:
         checksum/pgbouncer-probes-secret: {{ include (print $.Template.BasePath "/secret-probes.yaml") . | sha256sum }}
       labels:
         app: {{ template "pgbouncer.name" . }}
+        release: {{ .Release.Name }}
     spec:
       containers:
       - name: {{ template "pgbouncer.fullname" . }}

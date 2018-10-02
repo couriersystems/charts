@@ -15,3 +15,4 @@ spec:
     targetPort: pgbouncer
   selector:
     app: {{ template "pgbouncer.name" . }}
+    release: {{ .Release.Name }}

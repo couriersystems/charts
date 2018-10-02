@@ -1,7 +1,24 @@
 apiVersion: v1
 entries:
   pgbouncer:
-  - created: 2018-08-24T23:20:10.073986795-04:00
+  - created: 2018-10-02T16:40:50.997661949-04:00
+    description: Chart for PGBouncer
+    digest: e5040eb46692b6c7dd1690a8e93990e16042a638f8858eb60cc08ffa0fd01812
+    engine: gotpl
+    home: https://pgbouncer.github.io
+    keywords:
+    - postgresql
+    - database
+    - sql
+    maintainers:
+    - name: Courier Systems LLC
+    name: pgbouncer
+    sources:
+    - https://github.com/couriersystems/charts
+    urls:
+    - pgbouncer-0.2.6.tgz
+    version: 0.2.6
+  - created: 2018-10-02T16:40:50.997022619-04:00
     description: Chart for PGBouncer
     digest: 0e8590b83bdc48318d2abae8b0ed1afbfaf76d6627ad59fe1a40f8cf1bb94db4
     engine: gotpl
@@ -18,7 +35,7 @@ entries:
     urls:
     - pgbouncer-0.2.5.tgz
     version: 0.2.5
-  - created: 2018-08-24T23:20:10.073604116-04:00
+  - created: 2018-10-02T16:40:50.995835359-04:00
     description: Chart for PGBouncer
     digest: 9c2e3e26406d003f9c11bfcd1ef675a03348d7b7b109a67f13f57bf3cd20a457
     engine: gotpl
@@ -35,7 +52,7 @@ entries:
     urls:
     - pgbouncer-0.2.4.tgz
     version: 0.2.4
-  - created: 2018-08-24T23:20:10.072849816-04:00
+  - created: 2018-10-02T16:40:50.994394282-04:00
     description: Chart for PGBouncer
     digest: fe303f92e2985be91ccd21c3bdf9e8a01f7c122ea53602f146df2c79abc6c4dc
     engine: gotpl
@@ -52,7 +69,7 @@ entries:
     urls:
     - pgbouncer-0.2.3.tgz
     version: 0.2.3
-  - created: 2018-08-24T23:20:10.072505556-04:00
+  - created: 2018-10-02T16:40:50.993281605-04:00
     description: Chart for PGBouncer
     digest: b8a29daccfb34e873d5f093484000f23b3ae78a5dd35c694a8bbad6895734ee2
     engine: gotpl
@@ -69,7 +86,7 @@ entries:
     urls:
     - pgbouncer-0.2.2.tgz
     version: 0.2.2
-  - created: 2018-08-24T23:20:10.072161435-04:00
+  - created: 2018-10-02T16:40:50.991971302-04:00
     description: Chart for PGBouncer
     digest: 6acdf431bebd233b3bf523b3e9ce01cb4c5166951b68c4b9a6d9d6747ee9e34c
     engine: gotpl
@@ -87,7 +104,7 @@ entries:
     urls:
     - pgbouncer-0.2.1.tgz
     version: 0.2.1
-  - created: 2018-08-24T23:20:10.07180211-04:00
+  - created: 2018-10-02T16:40:50.990901018-04:00
     description: Chart for PGBouncer
     digest: e432a354ea8317da886feec8b1819b8dc603f46db9bc97d8e371fa1b6c413ac3
     engine: gotpl
@@ -105,4 +122,4 @@ entries:
     urls:
     - pgbouncer-0.2.0.tgz
     version: 0.2.0
-generated: 2018-08-24T23:20:10.07118893-04:00
+generated: 2018-10-02T16:40:50.988948082-04:00
